@@ -30,6 +30,63 @@ file-organizer/
 整理目录：
 
 ```bash
-pyth
+python filetool.py Downloads
 ```
+
+预览整理结果：
+
+```bash
+python filetool.py Downloads --dry-run
+```
+
+查看帮助：
+
+```bash
+python filetool.py --help
+```
+
+例如：
+
+```text
+Downloads/
+├── photo.jpg
+├── report.pdf
+├── song.mp3
+└── video.mp4
+```
+
+整理后：
+
+```text
+Downloads/
+├── Images/
+│   └── photo.jpg
+├── Documents/
+│   └── report.pdf
+├── Music/
+│   └── song.mp3
+└── Videos/
+    └── video.mp4
+```
+
+## Supported Types
+
+| Type      | Extensions          |
+| --------- | ------------------- |
+| Images    | jpg, jpeg, png, gif |
+| Documents | pdf, doc, docx, txt |
+| Music     | mp3, wav, flac      |
+| Videos    | mp4, mkv, avi       |
+| Others    | Other files         |
+
+## Testing
+
+```bash
+python -m pytest
+```
+
+## Requirements
+
+* Python 3.10+
+* pytest
 
